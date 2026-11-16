@@ -7,6 +7,7 @@ ${DELAY}     500ms
 ${HOME_URL}  http://${SERVER}
 ${BROWSER}   chromium
 ${HEADLESS}  false
+${RESET_URL}  ${HOME_URL}/reset_app
 
 *** Keywords ***
 Open And Configure Browser
@@ -17,3 +18,6 @@ Open And Configure Browser
     END
     New Context
     New Page  about:blank
+
+Reset Application
+    Go To  ${RESET_URL}
